@@ -8,6 +8,34 @@ The repository contains systems developed for multiple experiment chapters and a
 
 Rather than functioning as a passive virtual tour, the project is built around **hands-on experiment workflows**. Players interact with equipment and experiment objects, perform required actions, record observations or measurements, receive feedback, and progress through structured activities.
 
+## Project Showcase
+
+### Chapter 1 — Pulse & Health Experiments
+Interactive activities explore pulse-rate measurement and changes associated with participant characteristics and physical activity, supported by guided experiment panels and runtime feedback.
+
+<p align="center">
+  <img src="newwww/ch%201/1.png" width="48%" alt="SciLab VR Chapter 1 experiment" />
+  <img src="newwww/ch%201/panel_Exp3C_Pulse_Activity.png" width="48%" alt="Pulse activity experiment panel" />
+</p>
+
+### Chapter 2 — Plant Growth Experiment
+A guided VR experiment workflow supports observation and recording of seedling growth, combining physical interaction with experiment-specific UI and results.
+
+<p align="center">
+  <img src="newwww/ch2/1.png" width="48%" alt="SciLab VR Chapter 2 experiment" />
+  <img src="newwww/ch2/panel_Exp2B_Seedling_Growth.png" width="48%" alt="Seedling growth experiment panel" />
+</p>
+
+### Chapter 3 — Materials & Chemistry Experiments
+Material-focused activities demonstrate additional interaction patterns, including corrosion and heat-related experiments, extending the same validation-driven VR learning framework across different laboratory scenarios.
+
+<p align="center">
+  <img src="newwww/ch3/1.png" width="48%" alt="SciLab VR Chapter 3 experiment" />
+  <img src="newwww/ch3/panel_Exp3B_Corrosion.png" width="48%" alt="Corrosion experiment panel" />
+</p>
+
+> The screenshots above are representative examples from the larger set of experiment activities. The portfolio intentionally highlights selected interactions rather than documenting every chapter screen.
+
 ## Key Systems
 
 ### Experiment & Chapter Management
@@ -99,10 +127,6 @@ SciLabVR/
 This repository demonstrates work across:
 
 **Unity Development • C# Gameplay Systems • VR Interaction • Physics Simulation • Educational Technology • Experiment Validation • UI/UX Implementation • Data Recording • Haptic Feedback • Interactive Learning**
-
-## Media
-
-Screenshots and gameplay demonstrations will be added later.
 
 ## Repository Note
 
