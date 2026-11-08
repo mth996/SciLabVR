@@ -1,133 +1,91 @@
 # SciLab VR
 
-**SciLab VR** is a Unity-based virtual reality science laboratory project built around interactive, guided experiments. The project combines VR interaction, experiment logic, real-time validation, bilingual user interfaces, data recording, and visual feedback to turn science activities into structured immersive learning experiences.
+**SciLab VR** is an immersive Unity VR science laboratory for Form 4 students on **Meta Quest 3**. Learners carry out guided, curriculum-based experiments: they observe, measure, record and submit results in a virtual lab, with feedback and progression at every step.
 
-## Project Overview
+**Role:** VR Game Designer / Developer · **Engine:** Unity 6 · **Language:** C# · **Platform:** Meta Quest 3 (standalone) · **Languages:** English & Bahasa Melayu
 
-The repository contains systems developed for multiple experiment chapters and activities, including body-health measurements, plant growth and support, industrial chemistry, and physics/material experiments.
+▶ **[Watch the gameplay video on YouTube](https://youtu.be/V43zmtV2cBs)** · 🌐 [Portfolio case study](https://mthportfolio.chronocraftstudios.com/scilab-vr.html)
 
-Rather than functioning as a passive virtual tour, the project is built around **hands-on experiment workflows**. Players interact with equipment and experiment objects, perform required actions, record observations or measurements, receive feedback, and progress through structured activities.
+---
 
-## Project Showcase
+## Project Context
 
-### Chapter 1 — Pulse & Health Experiments
-Interactive activities explore pulse-rate measurement and changes associated with participant characteristics and physical activity, supported by guided experiment panels and runtime feedback.
+Developed in 2026 at **Spark Capital** as part of a Malaysian government education-technology project. The application was **delivered to the client and accepted**.
 
-<p align="center">
-  <img src="newwww/ch%201/1.png" width="48%" alt="SciLab VR Chapter 1 experiment" />
-  <img src="newwww/ch%201/panel_Exp3C_Pulse_Activity.png" width="48%" alt="Pulse activity experiment panel" />
-</p>
+The experience contains **five playable levels covering 13 Form 4 science experiments** from five curriculum chapters: a field activity on how pulse changes with gender, age and activity, followed by four laboratory levels.
 
-### Chapter 2 — Plant Growth Experiment
-A guided VR experiment workflow supports observation and recording of seedling growth, combining physical interaction with experiment-specific UI and results.
+## My Role
 
-<p align="center">
-  <img src="newwww/ch2/1.png" width="48%" alt="SciLab VR Chapter 2 experiment" />
-  <img src="newwww/ch2/panel_Exp2B_Seedling_Growth.png" width="48%" alt="Seedling growth experiment panel" />
-</p>
+- Designed and developed the **gameplay, experiment interactions and recording mechanics for the four laboratory levels**: hollow vs. solid structures under load, seedling growth over six days, materials and latex coagulation, and changes in apple slices over time.
+- Built the activities where players **collect measurements with the controllers, enter and submit results**, and view calculated summaries such as the seedling mean.
+- Designed the **bilingual (English / Bahasa Melayu) text system**, replacing duplicated per-language UI panels with a single reusable approach.
+- Profiled and optimised the experience for **standalone Quest 3 performance**.
 
-### Chapter 3 — Materials & Chemistry Experiments
-Material-focused activities demonstrate additional interaction patterns, including corrosion and heat-related experiments, extending the same validation-driven VR learning framework across different laboratory scenarios.
+## Gameplay
 
-<p align="center">
-  <img src="newwww/ch3/1.png" width="48%" alt="SciLab VR Chapter 3 experiment" />
-  <img src="newwww/ch3/panel_Exp3B_Corrosion.png" width="48%" alt="Corrosion experiment panel" />
-</p>
+<table>
+  <tr>
+    <td width="50%" align="center"><img src="Media/Gameplay/ch1-pulse-field-activity.jpg" alt="Pulse field activity" /><br><sub><b>Pulse field activity</b>: how pulse rate changes when walking, running and resting.</sub></td>
+    <td width="50%" align="center"><img src="Media/Gameplay/ch2-structures-under-load.jpg" alt="Structures under load" /><br><sub><b>Structures under load</b>: comparing hollow and solid structures.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="Media/Gameplay/ch2-seedling-growth.jpg" alt="Seedling growth experiment" /><br><sub><b>Seedling growth</b>: measuring mung bean seedlings beside rulers.</sub></td>
+    <td width="50%" align="center"><img src="Media/Gameplay/ch2-seedling-measurement-panel.jpg" alt="Seedling measurement panel" /><br><sub><b>Guided instructions</b>: experiment panel with retry and notebook controls.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><img src="Media/Gameplay/ch3-corrosion-experiment.jpg" alt="Corrosion experiment" /><br><sub><b>Corrosion experiment</b>: timed iron vs. copper nail test.</sub></td>
+    <td width="50%" align="center"><img src="Media/Gameplay/ch3-material-impact-test.jpg" alt="Material impact test" /><br><sub><b>Material impact test</b>: physics-based drop test with measurement.</sub></td>
+  </tr>
+</table>
 
-> The screenshots above are representative examples from the larger set of experiment activities. The portfolio intentionally highlights selected interactions rather than documenting every chapter screen.
+More in-headset result panels are in [`Media/Panels`](Media/Panels).
 
 ## Key Systems
 
 ### Experiment & Chapter Management
-The project contains dedicated managers and controllers for coordinating experiment states, progression, completion, retry flows, UI panels, and chapter-specific activities.
+Dedicated managers and controllers coordinate experiment states, progression, completion, retry flows, UI panels and chapter-specific activities.
 
 ### Interactive Experiment Mechanics
-Examples represented in the current codebase include:
-
-- Pulse-rate measurement activities with timed sessions
-- Haptic and visual pulse feedback
-- Physics-based hardness/impact experiments
-- Chemical dripping and laboratory interaction systems
+- Physics-based hardness / impact experiments
+- Chemical dripping and laboratory interactions
 - Measurement and ruler-based activities
-- Test-tube, beaker, nail, rubber-strip, and placement interactions
+- Test-tube, beaker, nail, rubber-strip and placement interactions
 - Experiment confirmation and validation workflows
+- Timed pulse-measurement sessions with haptic and visual feedback
 
 ### Virtual Science Notebook
-A reusable notebook system records experiment results and organizes them by chapter and activity. It supports:
-
-- Experiment entries and recorded results
-- Pass/fail feedback
-- Chapter completion states
-- Multi-page content
-- Star/progression feedback
-- Runtime positioning in the VR environment
+A reusable notebook records experiment results and organises them by chapter and activity: recorded entries, pass/fail feedback, chapter completion states, multi-page content, star/progression feedback and runtime positioning in VR.
 
 ### Bilingual Interface
-The project includes English and Bahasa Melayu UI flows across experiment instructions, status messages, navigation, confirmation panels, and notebook content.
+English and Bahasa Melayu across experiment instructions, status messages, navigation, confirmation panels and notebook content.
 
 ### VR Feedback & Interaction
-The codebase includes systems for:
+World-space UI placement, haptic, visual and audio feedback, object placement and sockets, physics interactions, and NPC activity/animation behaviour.
 
-- World-space UI placement
-- Haptic feedback
-- Visual feedback
-- Object placement and sockets
-- Physics interactions
-- Audio feedback
-- NPC activity/animation behaviour
-- Interactive experiment controls
-
-## Technical Highlights
-
-- **Unity / C#**
-- Virtual Reality interaction systems
-- Physics-based experiment mechanics
-- Runtime experiment validation
-- State and progression management
-- World-space UI
-- TextMeshPro
-- Haptic and visual feedback
-- Persistent settings using PlayerPrefs
-- Modular chapter and experiment controllers
-- Data recording and result presentation
-
-## Selected Code Areas
+## Repository Structure
 
 ```text
 SciLabVR/
-├── 3a codes/
-│   ├── Chapter1Manager.cs
-│   ├── PulseSessionManager.cs
-│   ├── PulseTarget.cs
-│   ├── PulseHapticPlayer.cs
-│   ├── PulseVisualIndicator.cs
-│   └── NotebookRecorder.cs
-├── Chapter 6/
-│   ├── Chapter2AExperiment.cs
-│   ├── Chapter2BExperiment.cs
-│   ├── SimpleLineGraph.cs
-│   └── VerticalRulerUI.cs
-├── 9b/
-│   ├── Chapter3AExperiment.cs
-│   ├── Chapter3CExperiment.cs
-│   ├── Chapter3DExperiment.cs
-│   └── Chapter3Manager.cs
-├── NotebookSystem.cs
-├── NotebookPageData.cs
-├── ConfirmationStation.cs
-├── HardnessExperimentController.cs
-├── PlacementSocket2A.cs
-└── SettingsUI.cs
+├── Scripts/
+│   ├── Core/             # Shared systems: notebook, confirmation, placement, settings, lab objects
+│   ├── Chapter1_Pulse/   # Pulse field activity: sessions, haptics, wrist detection, recording
+│   ├── Chapter2/         # Structures under load, seedling growth, rulers and graphs
+│   ├── Chapter3/         # Materials, corrosion, latex and impact experiments
+│   ├── UI/               # Chapter overlay UI
+│   └── Editor/           # Editor tools for UI setup and button audio/animation
+├── Media/
+│   ├── Gameplay/         # In-game screenshots
+│   └── Panels/           # Experiment result panels (Chapters 1–3)
+├── CODE_SHOWCASE.md      # Guided tour of the most important scripts
+└── README.md
 ```
 
-> The repository is currently being organized as a technical portfolio showcase. Folder names and selected source files may be cleaned up as the public presentation is refined.
+New to the code? Start with **[CODE_SHOWCASE.md](CODE_SHOWCASE.md)**.
 
-## Development Focus
+## Technical Highlights
 
-This repository demonstrates work across:
-
-**Unity Development • C# Gameplay Systems • VR Interaction • Physics Simulation • Educational Technology • Experiment Validation • UI/UX Implementation • Data Recording • Haptic Feedback • Interactive Learning**
+Unity 6 · C# · XR Interaction Toolkit · Meta Quest 3 · physics-based experiment mechanics · runtime validation · state and progression management · world-space UI · TextMeshPro · haptic feedback · PlayerPrefs settings · modular chapter controllers · data recording and result presentation
 
 ## Repository Note
 
-This public repository contains selected code intended to demonstrate technical implementation and project architecture. Third-party assets and other restricted project materials are not included.
+This public repository contains selected scripts to demonstrate the technical implementation and architecture. The full Unity project, scenes and third-party assets are client-owned and not included. Unity `.meta` files are kept alongside each script.
